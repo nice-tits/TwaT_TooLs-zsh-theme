@@ -15,6 +15,10 @@ else # root
   PR_USER_OP='%B%F{red}%#%f'
 fi
 
+# Checks if command has an error code or not.
+# Returns green arrow when there is no error.
+# Returns red cross when there is an error.
+
 PR_PROMPT="%(?.%B%F{green}➜ %f.%B%F{red}⨯ %f)"
 
 # Check if we are on SSH or not
@@ -24,20 +28,19 @@ else
   PR_HOST='%F{blue}%M%f' # no SSH
 fi
 
-# Checks if command has an error code
-
-
+# Sets Prompt Variables.
 local return_code="%(?..%F{red}%? %f)"
-
 local user_host="${PR_USER}%F{cyan}💀${PR_HOST}"
 local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_super_status)'
 
+# Sets Prompt Layout
 PROMPT="
 ${user_host} ${current_dir} ${git_branch}
 $PR_PROMPT"
 RPROMPT="${return_code}"
 
+# Sets Configurations for Plugins.
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
