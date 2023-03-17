@@ -19,3 +19,11 @@ Prompt with Git-Status implementation.
 ![Root_Prompt_Git_Status](/screenshots/prompt-ss-3.png)
 <br>
 <br>Yes, I will continue update and fix this prompt as time goes by.
+
+## Current todo list:
+
+- [ ] Allow the Skull symbol to change if user is root or not.
+- [ ] Add support for more plugins
+- [ ] See if colors need optimizing
+- [ ] See if re-formatting plugins is neccessary.
+- [ ] TBD
