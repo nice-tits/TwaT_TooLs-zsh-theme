@@ -4,6 +4,13 @@ Personal Oh-My-ZSH theme, features include changing the prompt to a red cross up
 <br>To install the theme, simply use the command:<br>
 ```git clone https://github.com/Thy-GoD/thy-god-zsh-theme.git "$ZSH_CUSTOM/themes/Thy-GoD" && cp "$ZSH_CUSTOM/themes/Thy-GoD/ThyGoD.zsh-theme" "$ZSH_CUSTOM/themes/"```
 <br><br>Lastly, you'll have to enable the theme in ~/.zshrc as `ThyGoD`, and enable `git-status` as a plugin.
+<br><br>If you want to use this theme together with [Znap](https://github.com/marlonrichert/zsh-snap), add the following lines to ~/.zshrc:<br>
+```
+znap source ohmyzsh/ohmyzsh lib/{git,theme-and-appearance} # I will edit this as I include more plugins that require other libs.
+znap source ohmyzsh/ohmyzsh plugins/git-prompt # This will increase as I plan on including more plugins support.
+znap prompt Thy-GoD/thy-god-zsh-theme ThyGoD # Tells Znap to download and install my prompt.
+```
+
 
 ## Screenshots
 Note: Screenshots were taken with Kali Dark on Konsole.
