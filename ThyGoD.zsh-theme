@@ -9,7 +9,7 @@ local USER_SYMBOL ROOT_SYMBOL
 
 # Change these if you want to use other symbols.
 
-USER_SYMBOL='>>'
+USER_SYMBOL='>>>'
 ROOT_SYMBOL='💀'
 
 # Check the UID
