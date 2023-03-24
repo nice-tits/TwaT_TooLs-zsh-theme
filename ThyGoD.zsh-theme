@@ -4,15 +4,23 @@ setopt prompt_subst
 
 () {
 
-local PR_USER PR_USER_OP PR_PROMPT PR_HOST
+local PR_USER PR_USER_OP PR_PROMPT PR_HOST PR_SYMBOL
+local USER_SYMBOL ROOT_SYMBOL
+
+# Change these if you want to use other symbols.
+
+USER_SYMBOL='>>'
+ROOT_SYMBOL='💀'
 
 # Check the UID
 if [[ $UID -ne 0 ]]; then # normal user
   PR_USER='%F{blue}%n%f'
   PR_USER_OP='%F{blue}%#%f'
+  PR_SYMBOL="%B%F{cyan}${USER_SYMBOL}%f"
 else # root
   PR_USER='%B%F{red}%n%f'
   PR_USER_OP='%B%F{red}%#%f'
+  PR_SYMBOL="${ROOT_SYMBOL}"
 fi
 
 # Checks if command has an error code or not.
@@ -30,7 +38,7 @@ fi
 
 # Sets Prompt Variables.
 local return_code="%(?..%F{red}%? %f)"
-local user_host="${PR_USER}%F{cyan}💀${PR_HOST}"
+local user_host="${PR_USER}%F{cyan}${PR_SYMBOL}${PR_HOST}"
 local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_super_status)'
 
