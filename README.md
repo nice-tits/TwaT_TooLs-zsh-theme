@@ -2,7 +2,7 @@
 Personal Oh-My-ZSH theme, features include changing the prompt to a red cross upon invalid command and the usual git-status plugin implementation.<br>
 <br>Code was based off [thy-god]https://github.com/Thy-GoD/thy-god-zsh-theme [gnzh](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/gnzh.zsh-theme)/[bira](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/bira.zsh-theme)'s code, while being inspired by [spaceship prompt](https://spaceship-prompt.sh)'s looks and features.<br>
 <br>To install the theme, simply use the command:<br>
-```git clone git@github.com:nice-tits/TwaT_TooLs-zsh-theme.git "$ZSH_CUSTOM/themes/TwaT_TooLs" && cp "$ZSH_CUSTOM/themes/TwaT_TooLs/TwaT_TooLs.zsh-theme" "$ZSH_CUSTOM/themes/"```
+```git clone https://github.com/nice-tits/TwaT_TooLs-zsh-theme.git "$ZSH_CUSTOM/themes/TwaT_TooLs" && cp "$ZSH_CUSTOM/themes/TwaT_TooLs/TwaT_TooLs.zsh-theme" "$ZSH_CUSTOM/themes/"```
 <br><br>Lastly, you'll have to enable the theme in ~/.zshrc as `TwaT_TooLs`, and enable `git-status` as a plugin.
 <br><br>If you want to use this theme together with [Znap](https://github.com/marlonrichert/zsh-snap), add the following lines to ~/.zshrc:<br>
 ```
